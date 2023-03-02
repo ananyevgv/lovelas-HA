@@ -1,0 +1,420 @@
+type: vertical-stack
+cards:
+  - type: picture-elements
+    image: /local/DS3622xs+.jpg
+    elements:
+      - type: state-icon
+        entity: binary_sensor.nas_security_status
+        style:
+          left: 20%
+          top: 25%
+      - type: state-label
+        entity: binary_sensor.nas_security_status
+        prefix: 'Status: '
+        style:
+          left: 20%
+          top: 35%
+          color: '#ff0000'
+      - type: state-icon
+        entity: sensor.nas_upload_throughput
+        style:
+          left: 20%
+          top: 45%
+      - type: state-label
+        entity: sensor.nas_upload_throughput
+        prefix: 'Status: '
+        style:
+          left: 20%
+          top: 55%
+          color: '#ff0000'
+      - type: state-icon
+        entity: sensor.nas_download_throughput
+        style:
+          left: 20%
+          top: 65%
+      - type: state-label
+        entity: sensor.nas_download_throughput
+        prefix: 'Status: '
+        style:
+          left: 20%
+          top: 75%
+          color: '#ff0000'
+      - type: state-label
+        entity: update.nas_dsm_update
+        style:
+          left: 50%
+          top: 5%
+          color: '#ff0000'
+      - type: state-icon
+        entity: sensor.nas_drive_1_status
+        style:
+          left: 48%
+          top: 36%
+      - type: state-icon
+        entity: sensor.nas_drive_1_temperature
+        style:
+          left: 55%
+          top: 36%
+      - type: state-icon
+        entity: binary_sensor.nas_drive_1_exceeded_max_bad_sectors
+        style:
+          left: 62%
+          top: 35%
+      - type: state-icon
+        entity: sensor.nas_drive_3_status
+        style:
+          left: 48%
+          top: 47%
+      - type: state-icon
+        entity: sensor.nas_drive_3_temperature
+        style:
+          left: 55%
+          top: 47%
+      - type: state-icon
+        entity: binary_sensor.nas_drive_3_exceeded_max_bad_sectors
+        style:
+          left: 62%
+          top: 46%
+      - type: state-icon
+        entity: sensor.nas_drive_4_status
+        style:
+          left: 75%
+          top: 44%
+      - type: state-icon
+        entity: sensor.nas_drive_4_temperature
+        style:
+          left: 82%
+          top: 44%
+      - type: state-icon
+        entity: binary_sensor.nas_drive_4_exceeded_max_bad_sectors
+        style:
+          left: 88%
+          top: 43%
+      - type: state-icon
+        entity: sensor.nas_drive_5_status
+        style:
+          left: 48%
+          top: 57%
+      - type: state-icon
+        entity: sensor.nas_drive_5_temperature
+        style:
+          left: 55%
+          top: 57%
+      - type: state-icon
+        entity: binary_sensor.nas_drive_5_exceeded_max_bad_sectors
+        style:
+          left: 62%
+          top: 56%
+      - type: state-icon
+        entity: sensor.nas_drive_6_status
+        style:
+          left: 75%
+          top: 54%
+      - type: state-icon
+        entity: sensor.nas_drive_6_temperature
+        style:
+          left: 82%
+          top: 54%
+      - type: state-icon
+        entity: binary_sensor.nas_drive_6_exceeded_max_bad_sectors
+        style:
+          left: 88%
+          top: 53%
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.nas_cpu_utilization_total
+        name: CPU
+        color_thresholds:
+          - value: 0
+            color: '#32CD32'
+          - value: 10
+            color: '#00FF00'
+          - value: 20
+            color: '#7FFF00'
+          - value: 30
+            color: '#ADFF2F'
+          - value: 40
+            color: '#FFFF00'
+          - value: 50
+            color: '#FFD700'
+          - value: 60
+            color: '#FFA500'
+          - value: 70
+            color: '#FF8C00'
+          - value: 80
+            color: '#FF4500'
+          - value: 90
+            color: '#FF0000'
+          - value: 100
+            color: '#8B0000'
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.nas_memory_usage_real
+        name: RAM
+        color_thresholds:
+          - value: 0
+            color: '#32CD32'
+          - value: 10
+            color: '#00FF00'
+          - value: 20
+            color: '#7FFF00'
+          - value: 30
+            color: '#ADFF2F'
+          - value: 40
+            color: '#FFFF00'
+          - value: 50
+            color: '#FFD700'
+          - value: 60
+            color: '#FFA500'
+          - value: 70
+            color: '#FF8C00'
+          - value: 80
+            color: '#FF4500'
+          - value: 90
+            color: '#FF0000'
+          - value: 100
+            color: '#8B0000'
+        line_width: 8
+        font_size: 75
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.nas_download_throughput
+        name: download
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.nas_upload_throughput
+        name: upload
+        line_width: 8
+        font_size: 75
+  - type: horizontal-stack
+    cards:
+      - type: custom:flex-horseshoe-card
+        entities:
+          - entity: sensor.nas_volume_1_used_space
+            decimals: 1
+            icon: mdi:harddisk
+            name: NAS
+            area: volume_1
+          - entity: sensor.nas_volume_1_volume_used
+            decimals: 1
+          - entity: sensor.nas_volume_1_total_size
+            decimals: 1
+        scaleTickSize: 50
+        show:
+          scale_tickmarks: true
+        layout:
+          icons:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 20
+              size: 3
+          hlines:
+            - id: 0
+              xpos: 50
+              ypos: 48
+              length: 80
+              styles:
+                - opacity: 0.5;
+          circles:
+            - id: 0
+              xpos: 50
+              ypos: 61
+              radius: 3
+              styles:
+                - fill: var(--primary-text-color);
+                - opacity: 0.5;
+          states:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 40
+              styles:
+                - font-size: 3em;
+                - opacity: 0.9;
+            - id: 0
+              entity_index: 1
+              xpos: 46
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: end;
+            - id: 2
+              entity_index: 2
+              xpos: 54
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: start;
+          names:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 100
+          areas:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 80
+        horseshoe_scale:
+          min: 0
+          max: 215
+        color_stops:
+          '0': '#FFF6E3'
+          '215': '#FF8C06'
+      - type: custom:flex-horseshoe-card
+        entities:
+          - entity: sensor.nas_volume_2_used_space
+            decimals: 1
+            icon: mdi:harddisk
+            name: NAS
+            area: volume_2
+          - entity: sensor.nas_volume_2_volume_used
+            decimals: 1
+          - entity: sensor.nas_volume_2_total_size
+            decimals: 1
+        scaleTickSize: 50
+        show:
+          scale_tickmarks: true
+        layout:
+          icons:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 20
+              size: 3
+          hlines:
+            - id: 0
+              xpos: 50
+              ypos: 48
+              length: 80
+              styles:
+                - opacity: 0.5;
+          circles:
+            - id: 0
+              xpos: 50
+              ypos: 61
+              radius: 3
+              styles:
+                - fill: var(--primary-text-color);
+                - opacity: 0.5;
+          states:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 40
+              styles:
+                - font-size: 3em;
+                - opacity: 0.9;
+            - id: 0
+              entity_index: 1
+              xpos: 46
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: end;
+            - id: 2
+              entity_index: 2
+              xpos: 54
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: start;
+          names:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 100
+          areas:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 80
+        horseshoe_scale:
+          min: 0
+          max: 215
+        color_stops:
+          '0': '#FFF6E3'
+          '215': '#FF8C06'
+      - type: custom:flex-horseshoe-card
+        entities:
+          - entity: sensor.nas_volume_3_used_space
+            decimals: 1
+            icon: mdi:harddisk
+            name: NAS
+            area: volume_3
+          - entity: sensor.nas_volume_3_volume_used
+            decimals: 1
+          - entity: sensor.nas_volume_3_total_size
+            decimals: 1
+        scaleTickSize: 50
+        show:
+          scale_tickmarks: true
+        layout:
+          icons:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 20
+              size: 3
+          hlines:
+            - id: 0
+              xpos: 50
+              ypos: 48
+              length: 80
+              styles:
+                - opacity: 0.5;
+          circles:
+            - id: 0
+              xpos: 50
+              ypos: 61
+              radius: 3
+              styles:
+                - fill: var(--primary-text-color);
+                - opacity: 0.5;
+          states:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 40
+              styles:
+                - font-size: 3em;
+                - opacity: 0.9;
+            - id: 0
+              entity_index: 1
+              xpos: 46
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: end;
+            - id: 2
+              entity_index: 2
+              xpos: 54
+              ypos: 64
+              styles:
+                - font-size: 1.7em;
+                - text-anchor: start;
+          names:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 100
+          areas:
+            - id: 0
+              entity_index: 0
+              xpos: 50
+              ypos: 80
+        horseshoe_scale:
+          min: 0
+          max: 215
+        color_stops:
+          '0': '#FFF6E3'
+          '215': '#FF8C06'
