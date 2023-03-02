@@ -1,11 +1,5 @@
 # NAS synology home assistant
 
+<img src="https://github.com/ananyevgv/lovelas-HA/nas.jpg" height="300" alt="NAS">
 
 
-https://github.com/ananyevgv/lovelas-HA/nas.jpg)
-
-
-
-https://github.com/alryaz/lg-washer-dryer-card
-
-https://github.com/custom-cards/circle-sensor-card
