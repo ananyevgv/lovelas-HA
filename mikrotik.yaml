@@ -1,0 +1,152 @@
+type: vertical-stack
+cards:
+  - type: picture-elements
+    image: /local/RB2011iLS-IN.jpg
+    elements:
+      - type: state-icon
+        entity: binary_sensor.mikrotik_pppoe_out1_connection
+        style:
+          top: 63%
+          left: 10%
+          '--mdc-icon-size': 20px
+        icon: mdi:circle-medium
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether1_connection
+        style:
+          top: 65%
+          left: 23.3%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether2_connection
+        style:
+          top: 65%
+          left: 29.2%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether3_connection
+        style:
+          top: 65%
+          left: 35.1%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether4_connection
+        style:
+          top: 65%
+          left: 41.2%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether5_connection
+        style:
+          top: 65%
+          left: 47%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether6_connection
+        style:
+          top: 65%
+          left: 67%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether7_connection
+        style:
+          top: 65%
+          left: 72.9%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether8_connection
+        style:
+          top: 65%
+          left: 78.9%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether9_connection
+        style:
+          top: 65%
+          left: 84.6%
+        icon: mdi:ethernet
+      - type: state-icon
+        entity: binary_sensor.mikrotik_ether10_connection
+        style:
+          top: 65%
+          left: 90.7%
+        icon: mdi:ethernet
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.mikrotik_rb2011ils_cpu_load
+        name: CPU
+        color_thresholds:
+          - value: 0
+            color: '#32CD32'
+          - value: 10
+            color: '#00FF00'
+          - value: 20
+            color: '#7FFF00'
+          - value: 30
+            color: '#ADFF2F'
+          - value: 40
+            color: '#FFFF00'
+          - value: 50
+            color: '#FFD700'
+          - value: 60
+            color: '#FFA500'
+          - value: 70
+            color: '#FF8C00'
+          - value: 80
+            color: '#FF4500'
+          - value: 90
+            color: '#FF0000'
+          - value: 100
+            color: '#8B0000'
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.mikrotik_rb2011ils_memory_usage
+        name: RAM
+        color_thresholds:
+          - value: 0
+            color: '#32CD32'
+          - value: 10
+            color: '#00FF00'
+          - value: 20
+            color: '#7FFF00'
+          - value: 30
+            color: '#ADFF2F'
+          - value: 40
+            color: '#FFFF00'
+          - value: 50
+            color: '#FFD700'
+          - value: 60
+            color: '#FFA500'
+          - value: 70
+            color: '#FF8C00'
+          - value: 80
+            color: '#FF4500'
+          - value: 90
+            color: '#FF0000'
+          - value: 100
+            color: '#8B0000'
+        line_width: 8
+        font_size: 75
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.mikrotik_rb2011ils_hdd_usage
+        name: hdd
+        line_width: 8
+        font_size: 75
+        hour24: true
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Интернет TX
+        hour24: true
+        entities:
+          - sensor.mikrotik_pppoe_out1_tx
+      - type: custom:mini-graph-card
+        name: Интернет RX
+        hour24: true
+        entities:
+          - sensor.mikrotik_pppoe_out1_rx
