@@ -9,3 +9,7 @@
 # Mikrotik home assistant
 
 <img src="https://github.com/ananyevgv/lovelas-HA/blob/main/mikrotik.jpg" height="300" alt="NAS">
+
+# Boiler Baxi home assistant
+
+<img src="https://github.com/ananyevgv/lovelas-HA/blob/main/baxi.jpg" height="300" alt="NAS">
