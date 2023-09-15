@@ -6,6 +6,11 @@ style: |
     background-color: rgba(0,0,0,0.6);
   }
 elements:
+  - type: state-icon
+    entity: switch.otc_active
+    style:
+      left: 10%
+      top: 9%
   - type: state-label
     entity: number.ch_setpoint_temperature
     style:
@@ -85,30 +90,6 @@ elements:
     style:
       left: 20%
       top: 5%
-  - type: state-label
-    entity: sensor.ch_maximum_temperature
-    prefix: 'ch_max '
-    style:
-      left: 55%
-      top: 65%
-  - type: state-label
-    entity: sensor.ch_minimum_temperature
-    prefix: 'ch_min '
-    style:
-      left: 55%
-      top: 69%
-  - type: state-label
-    entity: sensor.dhw_maximum_temperature
-    prefix: 'dhw_max '
-    style:
-      left: 55%
-      top: 40%
-  - type: state-label
-    entity: sensor.dhw_minimum_temperature
-    prefix: 'dhw_min '
-    style:
-      left: 55%
-      top: 44%
   - type: state-icon
     entity: binary_sensor.flame_active
     icon: mdi:fire
@@ -136,7 +117,7 @@ elements:
       left: 8%
   - type: state-icon
     entity: binary_sensor.gas_flame_fault
-    icon: mdi:gas-burner
+    icon: mdi:fire
     style:
       top: 60%
       left: 8%
@@ -165,7 +146,7 @@ elements:
       left: 8%
       top: 80%
   - type: state-icon
-    entity: switch.eco_enabled_2
+    entity: switch.eco_enabled
     icon: mdi:sprout
     style:
       left: 8%
@@ -176,3 +157,16 @@ elements:
     style:
       left: 8%
       top: 5%
+  - type: state-label
+    icon: mdi:home-thermometer-outline
+    entity: sensor.boiler_power
+    style:
+      left: 80%
+      top: 5%
+  - type: state-label
+    icon: mdi:home-thermometer-outline
+    entity: sensor.boiler_total_daily_energy
+    style:
+      left: 80%
+      top: 10%
+
