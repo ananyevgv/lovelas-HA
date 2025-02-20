@@ -1,0 +1,121 @@
+type: picture-elements
+image: |
+  /local/siemens.jpg
+style: |
+  ha-card {
+    background-color: rgba(0,0,0,0.6);
+  }
+elements:
+  - type: custom:circle-sensor-card
+    entity: sensor.posuda_progress
+    fill: rgba(40, 40, 49, 0.6)
+    font_style:
+      font-color: white
+      font-size: 2em
+      line-height: 1.2
+      text-align: center
+      text-shadow: 1px 1px black
+    gradient: true
+    min: 0
+    show_card: false
+    stroke_width: 15
+    style:
+      align: center
+      left: 35%
+      top: 50%
+      width: 70%
+  - type: state-label
+    entity: sensor.posudomoechnaia_mashina_operation_state
+    style:
+      top: 44%
+      left: 48%
+      font-size: 14px
+      color: "#8df427"
+  - type: state-label
+    entity: sensor.posuda_time_end
+    style:
+      color: "#8df47"
+      font-family: segment7
+      font-size: 25px
+      top: 25%
+      left: 49%
+  - type: state-icon
+    entity: binary_sensor.posudomoechnaia_mashina_remote_control
+    style:
+      top: 32%
+      left: 10%
+      font-size: 10px
+  - type: state-icon
+    entity: binary_sensor.posudomoechnaia_mashina_door
+    style:
+      top: 42%
+      left: 10%
+      font-size: 10px
+  - type: state-icon
+    entity: binary_sensor.posudomoechnaia_mashina_remote_start
+    style:
+      top: 22%
+      left: 85%
+      font-size: 10px
+  - type: state-icon
+    entity: switch.posudomoechnaia_mashina_power
+    style:
+      align: left
+      left: 12%
+      top: 9%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    icon: mdi:arm-flex
+    entity: switch.posudomoechnaia_mashina_program_intensiv70
+    style:
+      align: left
+      left: 60%
+      top: 77%
+      width: 85%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    icon: mdi:leaf
+    entity: switch.posudomoechnaia_mashina_program_eco50
+    style:
+      align: left
+      left: 80%
+      top: 77%
+      width: 85%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    icon: mdi:glass-cocktail
+    entity: switch.posudomoechnaia_mashina_program_glas40
+    style:
+      align: left
+      left: 100%
+      top: 77%
+      width: 85%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    icon: mdi:clock-fast
+    entity: switch.posudomoechnaia_mashina_program_quick65
+    style:
+      align: left
+      left: 120%
+      top: 77%
+      width: 85%
+      "--mdc-icon-size": 40px
+  - type: state-label
+    entity: sensor.blank
+    prefix: "88:88"
+    style:
+      color: "#555"
+      font-family: segment7
+      font-size: 15px
+      left: 83%
+      top: 7.4%
+      transform: translate(-100%,-50%)
+  - type: state-label
+    entity: sensor.posuda_time
+    style:
+      color: "#8df427"
+      font-family: segment7
+      font-size: 15px
+      left: 83%
+      top: 7.4%
+      transform: translate(-100%,-50%)
