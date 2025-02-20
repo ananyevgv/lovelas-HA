@@ -31,12 +31,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -52,12 +50,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -73,12 +69,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -94,12 +88,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -115,12 +107,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -136,12 +126,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -157,12 +145,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -178,12 +164,10 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
             color: red;
-            {% endif %}
             {% endif %}
           }
   - type: state-icon
@@ -221,12 +205,9 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% else %}
-            {% if is_state(config.entity,'1.0G') %}
+            {% elif is_state(config.entity,'1G') %}
               color: green !important;
             {% else %}
-            color: red;
-            {% endif %}
             color: red;
             {% endif %}
           }
@@ -358,3 +339,4 @@ elements:
       left: 83%
       transform: scale(0.5,1)
       color: var(--anything)
+
