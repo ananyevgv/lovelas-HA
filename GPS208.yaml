@@ -1,0 +1,360 @@
+type: picture-elements
+image: /local/picture/GPS208.jpg
+elements:
+  - type: state-icon
+    style:
+      top: 59%
+      left: 28%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    entity: sensor.gps208000024460041arubg3l_voltage
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+          {% if (states(config.entity)|int(default=0)) > 50 %}
+            color: green !important;
+          {% else %}
+          color: red;
+          {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_1_link
+    style:
+      top: 59%
+      left: 37%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_2_link
+    style:
+      top: 59%
+      left: 44%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_3_link
+    style:
+      top: 59%
+      left: 51.5%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_4_link
+    style:
+      top: 59%
+      left: 59%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_5_link
+    style:
+      top: 59%
+      left: 66.5%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_6_link
+    style:
+      top: 59%
+      left: 74%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_7_link
+    style:
+      top: 59%
+      left: 81%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_8_link
+    style:
+      top: 59%
+      left: 88%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_lan2_link
+    style:
+      top: 59%
+      left: 12%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1.0G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            color: red;
+            {% endif %}
+          }
+  - type: state-icon
+    entity: sensor.gps208000024460041arubg3l_lan1_link
+    style:
+      top: 59%
+      left: 19%
+      "--mdc-icon-size": 10px
+    icon: mdi:circle
+    card_mod:
+      style:
+        state-badge $: |
+          ha-state-icon {
+            {% if is_state(config.entity,'100M') %}
+              color: orange !important;
+            {% else %}
+            {% if is_state(config.entity,'1.0G') %}
+              color: green !important;
+            {% else %}
+            color: red;
+            {% endif %}
+            color: red;
+            {% endif %}
+          }
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_1_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 30%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_2_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 37%
+      color: var(--anything)
+      transform: scale(0.5,1)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_3_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 47%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_4_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 54%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_5_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 61%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_6_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 68%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_7_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 76%
+      transform: scale(0.5,1)
+      color: var(--anything)
+  - type: state-label
+    entity: sensor.gps208000024460041arubg3l_7_power
+    card_mod:
+      style: |
+        :host {      
+          {% if is_state(config.entity,'0')  %}
+          --anything: black;
+          {%- else -%}
+          --anything: white;
+          {%- endif %}
+        }
+    style:
+      top: 61%
+      left: 83%
+      transform: scale(0.5,1)
+      color: var(--anything)
