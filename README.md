@@ -12,7 +12,7 @@
 
 # SSCPOE/STEAMEMO switch GPS208  home assistant
 
-<img src="https://github.com/ananyevgv/lovelas-HA/blob/main/gps208.jpg" height="200" alt="switch GPS208">
+<img src="https://github.com/ananyevgv/lovelas-HA/blob/main/gps208.jpg" height="100" alt="switch GPS208">
 
 # Boiler Baxi home assistant
 
