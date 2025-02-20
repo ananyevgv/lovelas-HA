@@ -35,9 +35,9 @@ cards:
           style:
             state-badge $: |
               ha-state-icon {
-                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full') %}
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
                   color: green !important;
-                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
                 color: orange !important;
                 {% else %}
                 color: red;
@@ -54,9 +54,9 @@ cards:
           style:
             state-badge $: |
               ha-state-icon {
-                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full') %}
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
                   color: green !important;
-                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
                 color: orange !important;
                 {% else %}
                 color: red;
@@ -73,9 +73,9 @@ cards:
           style:
             state-badge $: |
               ha-state-icon {
-                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full') %}
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
                   color: green !important;
-                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
                 color: orange !important;
                 {% else %}
                 color: red;
@@ -92,9 +92,9 @@ cards:
           style:
             state-badge $: |
               ha-state-icon {
-                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full') %}
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
                   color: green !important;
-                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
                 color: orange !important;
                 {% else %}
                 color: red;
@@ -111,9 +111,9 @@ cards:
           style:
             state-badge $: |
               ha-state-icon {
-                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full') %}
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
                   color: green !important;
-                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
                 color: orange !important;
                 {% else %}
                 color: red;
@@ -213,4 +213,5 @@ cards:
             color: "#00ff8a"
           - value: 80
             color: "#D64542"
+
 
