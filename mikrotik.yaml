@@ -27,8 +27,9 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether1_connection
         style:
-          top: 65%
-          left: 23.3%
+          top: 43%
+          left: 18%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
         card_mod:
           style:
@@ -45,8 +46,9 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether2_connection
         style:
-          top: 65%
-          left: 29.2%
+          top: 43%
+          left: 24%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
         card_mod:
           style:
@@ -63,8 +65,9 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether3_connection
         style:
-          top: 65%
-          left: 35.1%
+          top: 43%
+          left: 30%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
         card_mod:
           style:
@@ -81,8 +84,9 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether4_connection
         style:
-          top: 65%
-          left: 41.2%
+          top: 43%
+          left: 36%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
         card_mod:
           style:
@@ -99,8 +103,9 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether5_connection
         style:
-          top: 65%
-          left: 47%
+          top: 43%
+          left: 42%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
         card_mod:
           style:
@@ -117,65 +122,38 @@ cards:
       - type: state-icon
         entity: binary_sensor.mikrotik_ether6_connection
         style:
-          top: 65%
-          left: 67%
+          top: 43%
+          left: 61.5%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
       - type: state-icon
         entity: binary_sensor.mikrotik_ether7_connection
         style:
-          top: 65%
-          left: 72.9%
+          top: 43%
+          left: 67.5%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
       - type: state-icon
         entity: binary_sensor.mikrotik_ether8_connection
         style:
-          top: 65%
-          left: 78.9%
+          top: 43%
+          left: 73.3%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
       - type: state-icon
         entity: binary_sensor.mikrotik_ether9_connection
         style:
-          top: 65%
-          left: 84.6%
+          top: 43%
+          left: 79%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
       - type: state-icon
         entity: binary_sensor.mikrotik_ether10_connection
         style:
-          top: 65%
-          left: 90.7%
+          top: 43%
+          left: 85.5%
+          transform: scale(1.2,1.2)rotate(180deg)
         icon: mdi:ethernet
-      - type: state-icon
-        entity: binary_sensor.mikrotik_pppoe_out1_connection
-        icon: mdi:circle-medium
-        style:
-          top: 63%
-          left: 10%
-          "--mdc-icon-size": 20px
-        card_mod:
-          style: |
-            :host {      
-               {% if is_state(config.entity,'on')  %}
-               --anything: black;
-               {%- else -%}
-               --anything: white;
-               {%- endif %}
-             }
-      - type: state-icon
-        entity: binary_sensor.mikrotik_pppoe_out1_connection
-        style:
-          top: 63%
-          left: 10%
-          "--mdc-icon-size": 20px
-        icon: mdi:circle-medium
-        card_mod:
-          style:
-            state-badge $: |
-              ha-state-icon {
-                {% if is_state(config.entity,'on') %}
-                  color: green !important;
-                color: red;
-                {% endif %}
-              }
   - type: horizontal-stack
     cards:
       - type: custom:mini-graph-card
@@ -235,3 +213,4 @@ cards:
             color: "#00ff8a"
           - value: 80
             color: "#D64542"
+
