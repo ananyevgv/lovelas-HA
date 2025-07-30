@@ -21,3 +21,5 @@
 # Siemens dishwasher home assistant
 
 <img src="https://github.com/ananyevgv/lovelas-HA/blob/main/siemens_dishwasher.jpg" height="300" alt="dishwasher">
+
+https://github.com/dingausmwald/circle-sensor-card
