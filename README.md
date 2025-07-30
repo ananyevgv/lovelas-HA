@@ -17,3 +17,7 @@
 # Boiler Baxi home assistant
 
 <img src="https://github.com/ananyevgv/lovelas-HA/blob/main/baxi.jpg" height="300" alt="Boiler">
+
+# Siemens dishwasher home assistant
+
+<img src="https://github.com/ananyevgv/lovelas-HA/blob/main/siemens_dishwasher.jpg" height="300" alt="dishwasher">
