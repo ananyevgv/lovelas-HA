@@ -21,11 +21,11 @@ elements:
     stroke_width: 15
     style:
       align: center
-      left: 35%
+      left: 49%
       top: 50%
-      width: 70%
+      width: 50%
   - type: state-label
-    entity: sensor.posudomoechnaia_mashina_operation_state
+    entity: sensor.siemens_dishwasher_program_phase
     style:
       top: 44%
       left: 48%
@@ -40,66 +40,53 @@ elements:
       top: 25%
       left: 49%
   - type: state-icon
-    entity: binary_sensor.posudomoechnaia_mashina_remote_control
+    entity: binary_sensor.siemens_dishwasher_door
     style:
       top: 32%
-      left: 10%
+      left: 90%
       font-size: 10px
-  - type: state-icon
-    entity: binary_sensor.posudomoechnaia_mashina_door
+  - type: icon
+    icon: mdi:shaker-outline
+    entity: sensor.siemens_dishwasher_salt
     style:
       top: 42%
-      left: 10%
+      left: 90%
       font-size: 10px
-  - type: state-icon
-    entity: binary_sensor.posudomoechnaia_mashina_remote_start
+  - type: icon
+    icon: mdi:creation
+    entity: sensor.siemens_dishwasher_rinse_aid
     style:
-      top: 22%
-      left: 85%
+      top: 52%
+      left: 90%
       font-size: 10px
+  - type: icon
+    icon: mdi:volume-source
+    style:
+      top: 13%
+      left: 70%
+      font-size: 10px
+  - type: state-label
+    entity: select.siemens_dishwasher_sound_level_signal
+    style:
+      align: left
+      left: 80%
+      top: 13%
   - type: state-icon
-    entity: switch.posudomoechnaia_mashina_power
+    entity: switch.siemens_dishwasher_power
+    tap_action:
+      action: toggle
     style:
       align: left
       left: 12%
       top: 9%
       "--mdc-icon-size": 40px
-  - type: state-icon
-    icon: mdi:arm-flex
-    entity: switch.posudomoechnaia_mashina_program_intensiv70
-    style:
-      align: left
-      left: 60%
-      top: 77%
-      width: 85%
-      "--mdc-icon-size": 40px
-  - type: state-icon
-    icon: mdi:leaf
-    entity: switch.posudomoechnaia_mashina_program_eco50
-    style:
-      align: left
-      left: 80%
-      top: 77%
-      width: 85%
-      "--mdc-icon-size": 40px
-  - type: state-icon
-    icon: mdi:glass-cocktail
-    entity: switch.posudomoechnaia_mashina_program_glas40
-    style:
-      align: left
-      left: 100%
-      top: 77%
-      width: 85%
-      "--mdc-icon-size": 40px
-  - type: state-icon
-    icon: mdi:clock-fast
-    entity: switch.posudomoechnaia_mashina_program_quick65
-    style:
-      align: left
-      left: 120%
-      top: 77%
-      width: 85%
-      "--mdc-icon-size": 40px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-binary_sensor-on-color: red;
+                --state-binary_sensor-off-color: green;
   - type: state-label
     entity: sensor.blank
     prefix: "88:88"
@@ -119,3 +106,75 @@ elements:
       left: 83%
       top: 7.4%
       transform: translate(-100%,-50%)
+  - type: state-icon
+    entity: button.siemens_dishwasher_start
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 12%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    entity: button.siemens_dishwasher_abort
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 25%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    entity: switch.siemens_dishwasher_variospeedplus
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 40%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    entity: switch.siemens_dishwasher_half_load
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 55%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    entity: switch.siemens_dishwasher_silence_on_demand
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 70%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-icon
+    entity: switch.siemens_dishwasher_speed_on_demand
+    tap_action:
+      action: toggle
+    style:
+      align: left
+      left: 85%
+      top: 80%
+      "--mdc-icon-size": 40px
+  - type: state-label
+    entity: select.siemens_dishwasher_selected_program
+    style:
+      align: left
+      left: 20%
+      top: 27%
+  - type: state-label
+    entity: select.siemens_dishwasher_default_program
+    style:
+      align: left
+      left: 25%
+      top: 22%
+  - type: state-label
+    entity: select.siemens_dishwasher_remote_control
+    style:
+      align: left
+      left: 50%
+      top: 72%
