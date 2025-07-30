@@ -32,13 +32,13 @@ elements:
       font-size: 14px
       color: "#8df427"
   - type: state-label
-    entity: sensor.posuda_time_end
+    entity: sensor.siemens_dishwasher_remaining_program_time
     style:
       color: "#8df47"
       font-family: segment7
       font-size: 25px
-      top: 25%
-      left: 49%
+      top: 27%
+      left: 50%
   - type: state-icon
     entity: binary_sensor.siemens_dishwasher_door
     style:
@@ -85,8 +85,8 @@ elements:
         :host {
           --card-mod-icon-color:
               color: var(--primary-color);
-                --state-binary_sensor-on-color: red;
-                --state-binary_sensor-off-color: green;
+                --state-switch-off-color: grey;
+                --state-switch-on-color: green;
   - type: state-label
     entity: sensor.blank
     prefix: "88:88"
@@ -98,7 +98,7 @@ elements:
       top: 7.4%
       transform: translate(-100%,-50%)
   - type: state-label
-    entity: sensor.posuda_time
+    entity: sensor.posuda_time_end
     style:
       color: "#8df427"
       font-family: segment7
@@ -133,6 +133,13 @@ elements:
       left: 40%
       top: 80%
       "--mdc-icon-size": 40px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-switch-off-color: yellow;
+                --state-switch-on-color: green;
   - type: state-icon
     entity: switch.siemens_dishwasher_half_load
     tap_action:
@@ -142,6 +149,13 @@ elements:
       left: 55%
       top: 80%
       "--mdc-icon-size": 40px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-switch-off-color: grey;
+                --state-switch-on-color: green;
   - type: state-icon
     entity: switch.siemens_dishwasher_silence_on_demand
     tap_action:
@@ -151,6 +165,13 @@ elements:
       left: 70%
       top: 80%
       "--mdc-icon-size": 40px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-switch-off-color: grey;
+                --state-switch-on-color: green;
   - type: state-icon
     entity: switch.siemens_dishwasher_speed_on_demand
     tap_action:
@@ -160,6 +181,13 @@ elements:
       left: 85%
       top: 80%
       "--mdc-icon-size": 40px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-switch-off-color: grey;
+                --state-switch-on-color: green;
   - type: state-label
     entity: select.siemens_dishwasher_selected_program
     style:
@@ -178,3 +206,4 @@ elements:
       align: left
       left: 50%
       top: 72%
+
