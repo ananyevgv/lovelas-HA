@@ -1,3 +1,24 @@
+# Время завершения мытья посуды
+      posuda_time_end:
+        value_template: >
+          {% if is_state('sensor.siemens_dishwasher_operation_state', 'Run') %}
+             {{ (as_timestamp(now()) + 60 * 60 * states('sensor.siemens_dishwasher_remaining_program_time') | float) | timestamp_custom('%H:%M')  }}
+          {% else %}
+            --:--
+          {% endif %}
+
+      posuda_progress:
+        value_template: >
+          {% if is_state('sensor.siemens_dishwasher_operation_state', 'Run') %}
+            {{ states('sensor.siemens_dishwasher_program_progress') }}
+          {% else %}
+           0
+          {% endif %}
+        unit_of_measurement: "%" 
+
+
+
+
 type: picture-elements
 image: |
   /local/siemens.jpg
