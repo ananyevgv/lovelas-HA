@@ -66,6 +66,14 @@ elements:
       top: 35%
       left: 90%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:  
+            {% if is_state(config.entity, 'full') %} #dce1e7
+            {% elif is_state(config.entity, 'nearly_empty') %} yellow
+            {% else %} var(--paper-item-icon-color, red)
+            {% endif %};
   - type: icon
     icon: mdi:creation
     entity: sensor.siemens_dishwasher_rinse_aid
@@ -73,6 +81,14 @@ elements:
       top: 45%
       left: 90%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:  
+            {% if is_state(config.entity, 'full') %} #dce1e7
+            {% elif is_state(config.entity, 'nearly_empty') %} yellow
+            {% else %} var(--paper-item-icon-color, red)
+            {% endif %};
   - type: state-label
     entity: sensor.siemens_dishwasher_start_count
     style:
@@ -111,12 +127,20 @@ elements:
       top: 6%
       left: 25%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:  #43739e
   - type: icon
     icon: mdi:flash
     style:
       top: 13%
       left: 25%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:  yellow
   - type: state-label
     entity: sensor.siemens_dishwasher_water_forecast
     style:
@@ -135,6 +159,10 @@ elements:
       top: 13%
       left: 70%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:  #43739e
   - type: state-label
     entity: select.siemens_dishwasher_sound_level_signal
     style:
@@ -208,7 +236,7 @@ elements:
         :host {
           --card-mod-icon-color:
               color: var(--primary-color);
-                --state-switch-off-color: yellow;
+                --state-switch-off-color: grey;
                 --state-switch-on-color: green;
   - type: state-icon
     entity: switch.siemens_dishwasher_half_load
@@ -276,5 +304,4 @@ elements:
       align: left
       left: 50%
       top: 72%
-
 
