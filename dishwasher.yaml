@@ -8,15 +8,11 @@ style: |
 elements:
   - type: custom:circle-sensor-card
     entity: sensor.posuda_progress
-    fill: rgba(40, 40, 49, 0.6)
-    font_style:
-      font-color: white
-      font-size: 2em
-      line-height: 1.2
-      text-align: center
-      text-shadow: 1px 1px black
+    fill: "#dce1e7"
+    stroke_bg_color: "#43739e"
     gradient: true
     min: 0
+    max: 100
     show_card: false
     stroke_width: 15
     style:
@@ -24,41 +20,115 @@ elements:
       left: 49%
       top: 50%
       width: 50%
+    color_stops:
+      "0": "#888888"
+      "30": "#888888"
+      "60": "#888888"
+      "90": "#888888"
+    font_style:
+      font-color: white
+      font-size: 2em
+      line-height: 1.2
+      text-align: center
+      text-shadow: 1px 1px black
   - type: state-label
     entity: sensor.siemens_dishwasher_program_phase
     style:
       top: 44%
       left: 48%
       font-size: 14px
-      color: "#8df427"
+      color: "#000000"
   - type: state-label
     entity: sensor.siemens_dishwasher_remaining_program_time
     style:
       color: "#8df47"
       font-family: segment7
       font-size: 25px
-      top: 27%
+      top: 57%
       left: 50%
   - type: state-icon
     entity: binary_sensor.siemens_dishwasher_door
     style:
-      top: 32%
+      top: 25%
       left: 90%
       font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-binary_sensor-off-color: #dce1e7;
+                --state-binary_sensor-on-color: red;
   - type: icon
     icon: mdi:shaker-outline
     entity: sensor.siemens_dishwasher_salt
     style:
-      top: 42%
+      top: 35%
       left: 90%
       font-size: 10px
   - type: icon
     icon: mdi:creation
     entity: sensor.siemens_dishwasher_rinse_aid
     style:
-      top: 52%
+      top: 45%
       left: 90%
       font-size: 10px
+  - type: state-label
+    entity: sensor.siemens_dishwasher_start_count
+    style:
+      top: 13.5%
+      left: 12%
+      font-size: 15px
+  - type: state-icon
+    entity: binary_sensor.siemens_dishwasher_low_water_pressure
+    style:
+      top: 55%
+      left: 90%
+      font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-binary_sensor-off-color: #dce1e7;
+                --state-binary_sensor-on-color: red;
+  - type: state-icon
+    entity: binary_sensor.siemens_dishwasher_aquastop_occurred
+    style:
+      top: 65%
+      left: 90%
+      font-size: 10px
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color:
+              color: var(--primary-color);
+                --state-binary_sensor-off-color: #dce1e7;
+                --state-binary_sensor-on-color: red;
+  - type: icon
+    icon: mdi:water
+    style:
+      top: 6%
+      left: 25%
+      font-size: 10px
+  - type: icon
+    icon: mdi:flash
+    style:
+      top: 13%
+      left: 25%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.siemens_dishwasher_water_forecast
+    style:
+      top: 6%
+      left: 33%
+      font-size: 15px
+  - type: state-label
+    entity: sensor.siemens_dishwasher_energy_forecast
+    style:
+      top: 13%
+      left: 33%
+      font-size: 15px
   - type: icon
     icon: mdi:volume-source
     style:
@@ -78,7 +148,7 @@ elements:
     style:
       align: left
       left: 12%
-      top: 9%
+      top: 8%
       "--mdc-icon-size": 40px
     card_mod:
       style: |
@@ -193,17 +263,18 @@ elements:
     style:
       align: left
       left: 20%
-      top: 27%
+      top: 30%
   - type: state-label
     entity: select.siemens_dishwasher_default_program
     style:
       align: left
       left: 25%
-      top: 22%
+      top: 23%
   - type: state-label
     entity: select.siemens_dishwasher_remote_control
     style:
       align: left
       left: 50%
       top: 72%
+
 
