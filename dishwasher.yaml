@@ -17,7 +17,7 @@ style: |
   }
 elements:
   - type: custom:circle-sensor-card
-    entity: sensor.posuda_progress
+    entity: sensor.siemens_dishwasher_program_progress
     fill: "#dce1e7"
     stroke_bg_color: "#43739e"
     gradient: true
@@ -80,7 +80,7 @@ elements:
       style: |
         :host {
           --card-mod-icon-color:  
-            {% if is_state(config.entity, 'full') %} #dce1e7
+            {% if is_state(config.entity, 'full' or 'none') %} #dce1e7
             {% elif is_state(config.entity, 'nearly_empty') %} yellow
             {% else %} var(--paper-item-icon-color, red)
             {% endif %};
@@ -314,4 +314,5 @@ elements:
       align: left
       left: 50%
       top: 72%
+
 
