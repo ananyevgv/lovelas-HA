@@ -8,7 +8,7 @@
 
 # Mikrotik home assistant
 
-<img src="https://github.com/ananyevgv/lovelas-HA/blob/main/mikrotik.jpg" height="300" alt="Mikrotik">
+<img src="./mikrotik.jpg" height="300" alt="Mikrotik">
 
 # SSCPOE/STEAMEMO switch GPS208  home assistant
 
