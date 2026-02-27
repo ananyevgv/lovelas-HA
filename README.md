@@ -1,6 +1,6 @@
 # NAS synology home assistant
 
-<img src="./main/nas.jpg" height="300" alt="NAS">
+<img src="./nas.jpg" height="300" alt="NAS">
 
 # APC home assistant
 
@@ -18,7 +18,7 @@
 
 # Boiler Baxi home assistant
 
-<img src="./main/baxi.jpg" height="300" alt="Boiler">
+<img src="./baxi.jpg" height="300" alt="Boiler">
 
 # Siemens dishwasher home assistant
 
