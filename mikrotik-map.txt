@@ -1,0 +1,90 @@
+type: vertical-stack
+cards:
+  - type: picture-elements
+    image: /local/map.jpg
+    elements:
+      - type: state-icon
+        entity: update.map_map_lite_routerboard_firmware_update
+        style:
+          top: 20%
+          left: 20%
+      - type: state-icon
+        entity: switch.map_pwr_line1_port
+        style:
+          top: 4.6%
+          left: 7.2%
+          transform: scale(0.3,1.2)
+        icon: mdi:credit-card
+      - type: state-icon
+        entity: binary_sensor.map_ether1_connection
+        style:
+          top: 4.6%
+          left: 23%
+          transform: scale(0.3,1.2)
+        icon: mdi:credit-card
+      - type: state-icon
+        entity: switch.map_wlan1_port
+        style:
+          top: 4.6%
+          left: 30.8%
+          transform: scale(0.3,1.2)
+        icon: mdi:credit-card
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.map_map_lite_cpu_load
+        name: CPU
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.map_map_lite_memory_usage
+        name: RAM
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.map_map_lite_hdd_usage
+        name: hdd
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+        hour24: true
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: MAP TX
+        hour24: true
+        entities:
+          - sensor.map_ether1_tx
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+      - type: custom:mini-graph-card
+        name: MAP RX
+        hour24: true
+        entities:
+          - sensor.map_ether1_rx
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"

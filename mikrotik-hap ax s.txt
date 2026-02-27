@@ -1,0 +1,166 @@
+type: vertical-stack
+cards:
+  - type: picture-elements
+    image: /local/hap ax s.png
+    elements:
+      - type: state-icon
+        entity: update.cap_1_hap_ac_routerboard_firmware_update
+        style:
+          top: 5%
+          left: 45%
+          transform: scale(1,1)
+      - type: state-icon
+        entity: binary_sensor.cap_1_ether1_connection
+        style:
+          top: 48%
+          left: 33.3%
+          transform: scale(2.2,1.8) rotate(180deg)
+        icon: mdi:ethernet
+        card_mod:
+          style:
+            state-badge $: |
+              ha-state-icon {
+                {% if is_state_attr(config.entity, 'advertising','10M-baseT-half,10M-baseT-full,100M-baseT-half,100M-baseT-full,1G-baseT-half,1G-baseT-full') %}
+                  color: green !important;
+                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                color: orange !important;
+                {% else %}
+                color: red;
+                {% endif %}
+              }
+      - type: state-icon
+        entity: binary_sensor.cap_1_ether2_connection
+        style:
+          top: 48%
+          left: 44.5%
+          transform: scale(2.2,1.8) rotate(180deg)
+        icon: mdi:ethernet
+        card_mod:
+          style:
+            state-badge $: |
+              ha-state-icon {
+                {% if is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
+                  color: green !important;
+                {% elif is_state_attr(config.entity, 'advertising','10M-half,10M-full,100M-half,100M-full') %}
+                color: orange !important;
+                {% else %}
+                color: red;
+                {% endif %}
+              }
+      - type: state-icon
+        entity: binary_sensor.cap_1_ether3_connection
+        style:
+          top: 48%
+          left: 56%
+          transform: scale(2.2,1.8) rotate(180deg)
+        icon: mdi:ethernet
+        card_mod:
+          style:
+            state-badge $: |
+              ha-state-icon {
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
+                  color: green !important;
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
+                color: orange !important;
+                {% else %}
+                color: red;
+                {% endif %}
+              }
+      - type: state-icon
+        entity: binary_sensor.cap_1_ether4_connection
+        style:
+          top: 48%
+          left: 67.5%
+          transform: scale(2.2,1.8) rotate(180deg)
+        icon: mdi:ethernet
+        card_mod:
+          style:
+            state-badge $: |
+              ha-state-icon {
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
+                  color: green !important;
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
+                color: orange !important;
+                {% else %}
+                color: red;
+                {% endif %}
+              }
+      - type: state-icon
+        entity: binary_sensor.cap_1_ether5_connection
+        style:
+          top: 48%
+          left: 79%
+          transform: scale(2.2,1.8) rotate(180deg)
+        icon: mdi:ethernet
+        card_mod:
+          style:
+            state-badge $: |
+              ha-state-icon {
+                {% if is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full,1000M-full') %}
+                  color: green !important;
+                {% elif is_state_attr(config.entity, 'link_partner_advertising','10M-half,10M-full,100M-half,100M-full') %}
+                color: orange !important;
+                {% else %}
+                color: red;
+                {% endif %}
+              }
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.cap_1_hap_ac_cpu_load
+        name: CPU
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.cap_1_hap_ac_memory_usage
+        name: RAM
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+        hour24: true
+      - type: custom:mini-graph-card
+        entities:
+          - sensor.cap_1_hap_ac_hdd_usage
+        name: hdd
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        line_width: 8
+        font_size: 75
+        hour24: true
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Capsman TX
+        hour24: true
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        entities:
+          - sensor.cap_1_ether1_tx
+      - type: custom:mini-graph-card
+        name: Capsman RX
+        hour24: true
+        color_thresholds:
+          - value: 0
+            color: "#00ff8a"
+          - value: 80
+            color: "#D64542"
+        entities:
+          - sensor.cap_1_ether1_rx
