@@ -12,10 +12,10 @@
 <img src="./l009.jpg" height="300" alt="Mikrotik l009">
 <img src="./hap s.jpg" height="300" alt="Mikrotik hap s">
 
-# SSCPOE/STEAMEMO switch GPS208  home assistant
+# SSCPOE/STEAMEMO switch GPS208 GPS204 home assistant
 
 <img src="./gps208.jpg" height="100" alt="switch GPS208">
-
+<img src="./gps204.jpg" height="100" alt="switch GPS204">
 # Boiler Baxi home assistant
 
 <img src="./baxi.jpg" height="300" alt="Boiler">
