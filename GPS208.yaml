@@ -31,7 +31,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -50,7 +50,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -69,7 +69,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -88,7 +88,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -107,7 +107,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -126,7 +126,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -145,7 +145,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -164,7 +164,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -205,7 +205,7 @@ elements:
           ha-state-icon {
             {% if is_state(config.entity,'100M') %}
               color: orange !important;
-            {% elif is_state(config.entity,'1G') %}
+            {% elif is_state(config.entity,'1.0G') %}
               color: green !important;
             {% else %}
             color: red;
@@ -223,8 +223,8 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
-      left: 30%
+      top: 59%
+      left: 31%
       transform: scale(0.5,1)
       color: var(--anything)
   - type: state-label
@@ -239,8 +239,8 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
-      left: 37%
+      top: 59%
+      left: 38.5%
       color: var(--anything)
       transform: scale(0.5,1)
   - type: state-label
@@ -255,8 +255,8 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
-      left: 47%
+      top: 60%
+      left: 48%
       transform: scale(0.5,1)
       color: var(--anything)
   - type: state-label
@@ -271,7 +271,7 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
+      top: 60%
       left: 54%
       transform: scale(0.5,1)
       color: var(--anything)
@@ -287,7 +287,7 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
+      top: 60%
       left: 61%
       transform: scale(0.5,1)
       color: var(--anything)
@@ -303,7 +303,7 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
+      top: 60%
       left: 68%
       transform: scale(0.5,1)
       color: var(--anything)
@@ -319,12 +319,12 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
+      top: 60%
       left: 76%
       transform: scale(0.5,1)
       color: var(--anything)
   - type: state-label
-    entity: sensor.gps208000024460041arubg3l_7_power
+    entity: sensor.gps208000024460041arubg3l_8_power
     card_mod:
       style: |
         :host {      
@@ -335,8 +335,7 @@ elements:
           {%- endif %}
         }
     style:
-      top: 61%
+      top: 60%
       left: 83%
       transform: scale(0.5,1)
       color: var(--anything)
-
