@@ -1,11 +1,25 @@
-## Fridge
+### Холодильник (Fridge)
 <img src="image/fridge.jpg" height="300" alt="fridge">
 
-## Shutter-cam
+Карточка с датчиками температуры и влажности для холодильника. Отображает текущие показания, статус работы и историю изменений.
+
+---
+
+### Жалюзи с камерой (Shutter-cam)
 <img src="image/shutter-cam.jpg" height="300" alt="shutter-cam">
 
-## Dishwasher
+Основной вид карточки: управление жалюзи с интеграцией видеопотока. Визуальный эффект шторки показывает текущую позицию, кнопки управления расположены снизу.
+
+---
+
+### Посудомоечная машина (Dishwasher)
 <img src="image/dishwasher.jpg" height="300" alt="dishwasher">
 
-## Network switch
-<img src="image/network switch.jpg" height="300" alt="network switch">
+Статус посудомоечной машины: отображение оставшегося времени, текущего цикла, индикатор завершения работы.
+
+---
+
+### Сетевой коммутатор (Network switch)
+<img src="image/network%20switch.jpg" height="300" alt="network switch">
+
+Мониторинг сетевого оборудования: отображение статуса портов, скорости соединения, нагрузки и температуры устройства.
